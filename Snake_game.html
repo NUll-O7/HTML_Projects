@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snake Game</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="SnakeStyle.css" rel = "stylesheet">
+</head>
+<body>
+    <h1 class="game-title">🐍 Snake Game</h1>
+    <div id="game-container">
+        <div class="stats-container">
+            <div class="stat-box">
+                <i class="fas fa-star"></i>
+                <span id="score">Score: 0</span>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-trophy"></i>
+                <span id="high-score">Best: 0</span>
+            </div>
+        </div>
+        <canvas id="game-board" width="400" height="400"></canvas>
+        <div id="start-screen">
+            <h2>Snake Game</h2>
+            <p class="key-prompt">Press any arrow key to start</p>
+            <div class="controls">
+                <span><i class="fas fa-arrow-left"></i></span>
+                <span><i class="fas fa-arrow-right"></i></span>
+                <span><i class="fas fa-arrow-up"></i></span>
+                <span><i class="fas fa-arrow-down"></i></span>
+            </div>
+        </div>
+        <div id="game-over">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="final-score">0</span></p>
+            <button class="btn" onclick="restartGame()">
+                <i class="fas fa-redo"></i> Play Again
+            </button>
+        </div>
+    </div>
+    <script src="SnakeCore.js"></script>
+</body>
+</html>
